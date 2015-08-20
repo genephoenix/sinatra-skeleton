@@ -1,0 +1,99 @@
+body{
+  background-color: pink;
+  /*text-align: center;*/
+  font-size:13.5px;
+}
+
+h2{
+  color: #6875B0;
+  text-align: center;
+  font-family: cursive;
+  background-color: white;
+  border: 2px solid black;
+}
+
+form{
+  /*width: 50%;*/
+  border:2px solid black;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 5em;
+  padding-top: 2em;
+}
+
+div{
+  padding: 0.4em;
+  font-family: sans-serif;
+  /*position:relative;*/
+}
+
+.btn-submit {
+  width:140px;
+  margin:17px auto;
+  display:block;
+}
+
+
+/*input{
+  position: absolute;
+  right:30%;
+  bottom:10%;
+}
+*/
+label{
+/*  position: absolute;
+  left:30%;
+  bottom:3%;*/
+  color: #6875B0;
+}
+
+.signupsubmit{
+  right: 10%;
+  bottom: 6em;
+  width: 6em;
+  background-color: #28BFBF;
+}
+
+.loginsubmit{
+  right:10%;
+  bottom:2.5em;
+  width: 6em;
+  background-color: #28BFBF;
+}
+
+.selectbox{
+  left: 8.2%;
+  margin-bottom: -2%;
+}
+
+.genderchoices{
+  top:1em;
+}
+
+.profilebutton{
+  right: 8%;
+  bottom: 6.7em;
+  background-color: #28BFBF;
+}
+
+.btn-login {
+  width:140px;
+  margin:16px auto;
+  display:block;
+}
+
+.btn-signup{
+  width:140px;
+  margin:16px auto;
+  display:block;
+
+}
+
+
+.bluebutton{
+  padding-left:200px;
+}
+
+.formbackgroundcolor{
+  background-color:#C0C4C4;
+}
