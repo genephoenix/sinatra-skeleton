@@ -97,3 +97,12 @@ label{
 .formbackgroundcolor{
   background-color:#C0C4C4;
 }
+
+/*user container */
+.user-container {
+  float: right;
+  padding: 20px;
+  margin: 10px;
+  background: #fff;
+  border: 1px solid #000;
+}

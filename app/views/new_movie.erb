@@ -1,0 +1,37 @@
+<body>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h2> Movie </h2>
+      <form action="/movies/create" method="POST" class="formbackgroundcolor">
+        
+        <div class="form-group">
+          <label for="title" class="col-sm-4 control-label"> Title: </label> 
+          <input type="text" name="title" id="title" value= "" placeholder="Enter Movie Title" /> <br/>
+        </div>
+        
+        <div class="form-group">
+          <label for "release_date" class="col-sm-4 control-label"> Release Date: </label> 
+          <input type="text" name="release_date" id="release_date" value ="" placeholder="Enter release date of movie" /> <br/>
+        </div>
+        
+        <div class="form-group">
+          <label for "director" class="col-sm-4 control-label"> Director(s): </label> 
+          <input type="text" name="director" id="director" value ="" placeholder="Enter director" /> <br/>
+        </div>
+
+        <div class="form-group">
+          <label for "rating" class="col-sm-4 control-label"> Rating: </label> 
+          <input type="text" name="rating" id="rating" value ="" placeholder="Enter movie rating" /> <br/>
+        </div>
+        
+        <div class="form-group">
+          <label for "image_url" class="col-sm-4 control-label"> Image Url: </label> 
+          <input type="text" name="image_url" id="image_url" value ="" placeholder="Enter image url for movie" /> <br/>
+        </div>
+
+        <div class="bluebutton">
+          <div class="btn-group btn-group-md">
+           <button type="submit" class="btn btn-primary btn-login">Submit</button>
+          </div>
+        </div>
+      </form>

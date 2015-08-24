@@ -28,6 +28,14 @@
   <title></title>
 </head>
 <body>
+  <span class="user-container">
+    <% if current_user %>
+      <h5><%= current_user.username %></h5>
+      <button>Logout</button>
+    <% else %>
+      <a href="/login"> Login and Signup </a>
+    <% end %>
+  </span>
   <%= yield %>
 </body>
 </html>
