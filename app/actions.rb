@@ -4,6 +4,10 @@ helpers do
   end
 end
 
+before do
+  redirect '/login' if !current_user && request.path != '/login' && request.path != '/signup'
+end
+
 # Homepage (Root path)
 get '/' do
   erb :index
@@ -52,6 +56,11 @@ get '/movies/new' do
     erb :new_movie
 end
 
+get '/movies/:id' do
+    @movie = Movie.find(params[:id])
+    erb :show_movie
+end
+
 post '/movies/create' do
   title = params[:title]
   release_date = params[:release_date]
@@ -59,11 +68,20 @@ post '/movies/create' do
   rating = params[:rating]
   image_url = params[:image_url]
   
-  user = User.find_by(id: session[:user_id])
-  if user
-    film = user.movies.create(title: title, release_date: release_date, director: director, rating: rating, image_url: image_url)
-    redirect '/'
-  else
-    redirect '/login'
-  end
+  new_movie = current_user.movies.create(title: title, release_date: release_date, director: director, rating: rating, image_url: image_url)
+  redirect "/movies/#{new_movie.id}"
+end
+
+get '/profile/edit' do
+  current_user
+  erb :profile
+end
+
+post '/profile/edit' do
+  username = params[:username]
+  email = params[:email]
+  password = params[:password]
+
+  new_profile = current_user.update(username: username, email: email, password: password)
+  redirect '/'
 end
