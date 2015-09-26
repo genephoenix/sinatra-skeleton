@@ -10,6 +10,7 @@ end
 
 # Homepage (Root path)
 get '/' do
+  @movies = Movie.all.reverse
   erb :index
 end
 
@@ -41,6 +42,11 @@ post '/signup' do
   else
     redirect '/login'
   end
+end
+
+get '/logout' do
+  session.clear
+  redirect '/movies'
 end
 
 
@@ -83,5 +89,15 @@ post '/profile/edit' do
   password = params[:password]
 
   new_profile = current_user.update(username: username, email: email, password: password)
+  redirect '/'
+end
+
+post '/movies/:id/reviews/new' do
+  p params
+  comment = params[:comment]
+  score = params[:score]
+
+  @movie = Movie.find(params[:id])
+  new_review = @movie.reviews.create(comment: comment, score: score)
   redirect '/'
 end

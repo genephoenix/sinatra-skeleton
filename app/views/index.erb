@@ -1,1 +1,15 @@
 <h1>Home Page</h1>
+
+<a href="/movies/new" class="btn btn-primary">Add a Movie</a>
+
+<% @movies.each_slice(3) do |slice| %>
+    <div class="row">
+    <% slice.each do |movie| %>
+        <div class="col-md-4 movie">
+            <a href="/movies/<%= movie.id %>"><img class = "movieposter" src="<%= movie.image_url %>"><br>
+            <h2><%= movie.title %></h2></a>
+        </div>
+    <% end %>
+    </div>
+<% end %>
+
